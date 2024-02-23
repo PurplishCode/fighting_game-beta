@@ -91,7 +91,7 @@ window.addEventListener("keyup", () => {
 
 // This function belongs to animate()
 
-// A conditioning of the current pressed key. If the key 'd' is pressed, then the player velocity incremented +=1 according to its truthy state, else if it's "a" then decrementing =-1 of its player velocity based on its truthy state. We'll also check if the corresponding variable key is either 'a' or 'd'.
+// A conditioning of the current pressed key. If the key 'd' is pressed, then the player velocity incremented += 5 according to its truthy state, else if it's "a" then decrementing -= 5 of its player velocity based on its truthy state. We'll also check if the corresponding constructor key is either 'a' or 'd'.
 
 // Player movement
 player.velocity.x = 0; // Velocity default player.
