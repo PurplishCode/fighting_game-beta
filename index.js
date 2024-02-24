@@ -16,7 +16,7 @@ const keys = {
 
   ArrowLeft: {
     pressed: false,
-  },
+  }, 
 
   ArrowRight: {
     pressed: false,
@@ -45,6 +45,7 @@ class Sprite {
     this.width = 50;
     this.height = 150;
     this.lastKey;
+    this.health = 100;
     this.attackBox = {
       position: {
         x: this.position.x,
@@ -160,7 +161,9 @@ function animate() {
     player.isAttacking
   ) {
     player.isAttacking = false;
-    console.log("player attack is succesful");
+    // Subtracting enemy healthbar
+    enemy.health -= 20;
+    document.querySelector("#enemyHealth").style.width = enemy.health + '%';
   }
 
   if (
@@ -171,7 +174,8 @@ function animate() {
     enemy.isAttacking
   ) {
     enemy.isAttacking = false;
-    console.log("enemy attack succesful");
+player.health -= 20;
+document.querySelector("#playerHealth").style.width = player.health + '%';
   }
 }
 
