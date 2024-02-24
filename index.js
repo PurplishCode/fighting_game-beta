@@ -6,6 +6,7 @@ const gravity = 0.6;
 canvas.width = 1024;
 canvas.height = 576;
 
+// Variable keys
 const keys = {
   d: {
     pressed: false,
