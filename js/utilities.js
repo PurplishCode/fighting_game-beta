@@ -1,5 +1,6 @@
 // Utilities function goes here. This determines, hitboxes, etc.
 
+// Function to check if two rectangles are colliding
 function rectangularCollision({ rectangle1, rectangle2 }) {
     return (
       rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
@@ -11,7 +12,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
       rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
     );
   }
-  
+  // Function to check the winner
   function determineWinner({ player, enemy, timerId }) {
     clearTimeout(timerId);
     document.querySelector('#displayText').style.display = 'flex';

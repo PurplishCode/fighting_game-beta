@@ -17,6 +17,7 @@ const background = new Sprite({
   
 })
 
+// Player and enemy 
 const player = new Fighter({
   position: {
     x: 100,
@@ -69,7 +70,7 @@ const keys = {
 };
 
 decreaseTimer();
-
+// Timer
 function animate() {
   window.requestAnimationFrame(animate);
   c.fillStyle = "black";
@@ -98,7 +99,8 @@ function animate() {
     enemy.velocity.x = -5;
   }
 
-  //detect collision
+  // Collision detection
+  // Subtracting enemy healthbar
   if (
     rectangularCollision({
       rectangle1: player,
@@ -111,7 +113,7 @@ function animate() {
     enemy.health -= 20;
     document.querySelector("#enemyHealth").style.width = enemy.health + "%";
   }
-
+// Subtracting player healthbar
   if (
     rectangularCollision({
       rectangle1: player,
@@ -173,7 +175,7 @@ window.addEventListener("keydown", (event) => {
       break;
   }
 });
-
+// Keyup event
 window.addEventListener("keyup", (event) => {
   switch (event.key) {
     case "d":
